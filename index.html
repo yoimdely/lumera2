@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMERA | Интеллектуальная лазерная эпиляция</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-light">
+    <!-- Custom Cursor -->
+    <div class="cursor js-cursor"></div>
+    <div class="cursor-follower js-cursor-follower"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise"></div>
+
+    <!-- Header -->
+    <header class="header js-header">
+        <div class="header__inner">
+            <div class="header__logo">Lumera<span>.</span></div>
+            <nav class="header__nav">
+                <a href="#about" class="magnetic" data-strength="20">О нас</a>
+                <a href="#equipment" class="magnetic" data-strength="20">Оборудование</a>
+                <a href="#prices" class="magnetic" data-strength="20">Прайс</a>
+                <a href="#contacts" class="magnetic" data-strength="20">Контакты</a>
+            </nav>
+            <div class="header__action">
+                <button class="btn btn--outline magnetic js-open-modal" data-strength="40">Записаться</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero -->
+        <section class="hero hero--split">
+            <div class="hero__text-side">
+                <div class="hero__text-inner">
+                    <div class="hero__badge js-fade-up">Premium Studio Sochi</div>
+                    <h1 class="hero__title js-split-text">Интеллектуальная<br>лазерная<br><i>эпиляция</i></h1>
+                    <p class="hero__desc js-fade-up">Гладкая кожа без бритья уже через 2 недели. Индивидуальная настройка параметров для вашего идеального комфорта.</p>
+                    
+                    <div class="hero__buttons js-fade-up">
+                        <button class="btn btn--solid magnetic js-open-modal" data-strength="50">
+                            <span>Записаться сейчас</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero__image-side">
+                <div class="hero__image-wrapper js-parallax" data-speed="0.9">
+                    <img src="images/hero.png" alt="Девушка Lumera">
+                </div>
+                <div class="hero__promo">
+                    <i class="ri-sparkling-fill"></i>
+                    <div>
+                        <strong>-20%</strong>
+                        <span>в честь открытия</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Advantages -->
+        <section id="about" class="section advantages">
+            <div class="container container--large">
+                <div class="section__header text-center">
+                    <span class="section__label js-fade-up">Философия Lumera</span>
+                    <h2 class="section__title js-split-text">Искусство<br><i>безупречности</i></h2>
+                </div>
+                
+                <div class="adv__grid">
+                    <div class="adv__card js-fade-up">
+                        <div class="adv__icon"><i class="ri-shield-star-line"></i></div>
+                        <h3>Стерильность</h3>
+                        <p>Бескомпромиссная чистота и абсолютная безопасность на каждом этапе процедуры.</p>
+                    </div>
+                    <div class="adv__card js-fade-up" style="transition-delay: 0.1s">
+                        <div class="adv__icon"><i class="ri-user-heart-line"></i></div>
+                        <h3>Индивидуальность</h3>
+                        <p>Глубокий анализ вашей кожи и волос для точного попадания в параметры аппарата.</p>
+                    </div>
+                    <div class="adv__card js-fade-up" style="transition-delay: 0.2s">
+                        <div class="adv__icon"><i class="ri-moon-clear-line"></i></div>
+                        <h3>Деликатность</h3>
+                        <p>Комфортная процедура с учетом вашего порога чувствительности и охлаждением.</p>
+                    </div>
+                    <div class="adv__card js-fade-up" style="transition-delay: 0.3s">
+                        <div class="adv__icon"><i class="ri-gemstone-line"></i></div>
+                        <h3>Эстетика</h3>
+                        <p>Пространство, где каждая деталь погружает вас в атмосферу премиального сервиса.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 & 4. Approach & Equipment -->
+        <section id="equipment" class="section split-section">
+            <div class="container">
+                <!-- Row 1 -->
+                <div class="split__row">
+                    <div class="split__text">
+                        <span class="split__label js-fade-up">Технологии</span>
+                        <h2 class="split__title js-split-text">Точное <i>воздействие</i></h2>
+                        <ul class="split__list js-fade-up">
+                            <li><strong>Интеллектуальный диодный лазер</strong> <br> работает с фолликулом, не затрагивая ткани.</li>
+                            <li><strong>Без боли и ожогов</strong> <br> минимизация дискомфорта благодаря системе 360°.</li>
+                            <li><strong>Стабильный результат</strong> <br> заметный эффект уже после первого сеанса.</li>
+                        </ul>
+                    </div>
+                    <div class="split__visual js-img-reveal">
+                        <img src="images/machine.png" alt="Оборудование" data-speed="1.1" class="js-parallax">
+                        <div class="overlay-badge js-fade-up">
+                            <i class="ri-drop-line"></i> Двойное охлаждение ICE
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="split__row split__row--reverse" style="margin-top: 10vw;">
+                    <div class="split__text">
+                        <span class="split__label js-fade-up">Подход</span>
+                        <h2 class="split__title js-split-text">Глубокий <i>анализ</i></h2>
+                        <ul class="split__list js-fade-up">
+                            <li><strong>Диагностика до сеанса</strong> <br> перед каждой процедурой оцениваем состояние кожи.</li>
+                            <li><strong>Точный подбор мощности</strong> <br> параметры аппарата выставляются строго под вас.</li>
+                        </ul>
+                    </div>
+                    <div class="split__visual js-img-reveal">
+                        <img src="images/interior.png" alt="Интерьер" data-speed="1.1" class="js-parallax">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contrast Big Typography section (DARK BACKGROUND NOW) -->
+        <section class="section contrast theme-dark">
+            <div class="container contrast__container">
+                <span class="section__label section__label--light js-fade-up">Проблема и решение</span>
+                <h2 class="huge-text js-split-text">Устали от<br>бритья?</h2>
+                <div class="contrast__bottom js-fade-up">
+                    <p>Раздражение, постоянный уход и вросшие волосы останутся в прошлом. Откройте для себя свободу и жизнь с идеально гладкой кожей надолго.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Prices & Promos -->
+        <section id="prices" class="section prices">
+            <div class="container container--large prices__container">
+                <div class="prices__content">
+                    <div class="section__header">
+                        <span class="section__label js-fade-up">Инвестиция в себя</span>
+                        <h2 class="section__title js-split-text">Цены на <i>популярные зоны</i></h2>
+                    </div>
+                    
+                    <div class="price-list">
+                        <div class="price-item js-fade-up">
+                            <span class="price-item__name">Подмышечные впадины</span>
+                            <div class="price-item__dots"></div>
+                            <span class="price-item__val">от 1 000 ₽</span>
+                        </div>
+                        <div class="price-item js-fade-up">
+                            <span class="price-item__name">Глубокое бикини</span>
+                            <div class="price-item__dots"></div>
+                            <span class="price-item__val">от 1 500 ₽</span>
+                        </div>
+                        <div class="price-item js-fade-up">
+                            <span class="price-item__name">Ноги полностью</span>
+                            <div class="price-item__dots"></div>
+                            <span class="price-item__val">от 2 000 ₽</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn--outline mt-4 js-fade-up magnetic js-open-modal" data-strength="30">Смотреть полный прайс</button>
+                </div>
+                
+                <div class="promos-sidebar js-fade-up">
+                    <div class="glass-card">
+                        <h3>Привилегии</h3>
+                        <div class="promo-items">
+                            <div class="promo-item">
+                                <div class="promo-val">-20%</div>
+                                <p>В честь открытия</p>
+                            </div>
+                            <div class="promo-item">
+                                <div class="promo-val">-10%</div>
+                                <p>На первый визит</p>
+                            </div>
+                            <div class="promo-item">
+                                <div class="promo-val">500 ₽</div>
+                                <p>Кешбэк за рекомендацию</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Process -->
+        <section class="section process">
+            <div class="container">
+                <div class="section__header text-center">
+                    <span class="section__label js-fade-up">Как это работает</span>
+                    <h2 class="section__title js-split-text">Ритуал <i>гладкости</i></h2>
+                </div>
+                
+                <div class="process__steps">
+                    <div class="p-step js-fade-up">
+                        <div class="p-step__num">01.</div>
+                        <h4>Консультация</h4>
+                        <p>Выявляем противопоказания и отвечаем на все вопросы до старта.</p>
+                    </div>
+                    <div class="p-step js-fade-up">
+                        <div class="p-step__num">02.</div>
+                        <h4>Анализ</h4>
+                        <p>Диагностируем тип кожи и волос для идеальной настройки.</p>
+                    </div>
+                    <div class="p-step js-fade-up">
+                        <div class="p-step__num">03.</div>
+                        <h4>Сеанс</h4>
+                        <p>Деликатное лазерное воздействие с умным охлаждением.</p>
+                    </div>
+                    <div class="p-step js-fade-up">
+                        <div class="p-step__num">04.</div>
+                        <h4>Уход</h4>
+                        <p>Даем подробные рекомендации по сохранению результата.</p>
+                    </div>
+                </div>
+                
+                <!-- 10. Constraints -->
+                <div class="limitations mt-5 js-fade-up">
+                    <div class="limitations__trigger js-limitations-trigger">
+                        <span>Ознакомиться с противопоказаниями</span>
+                        <i class="ri-add-line"></i>
+                    </div>
+                    <div class="limitations__content">
+                        <div class="limit-grid">
+                            <ul>
+                                <li>Беременность и лактация</li>
+                                <li>Онкологические заболевания</li>
+                                <li>Эпилепсия</li>
+                                <li>Сахарный диабет</li>
+                            </ul>
+                            <ul>
+                                <li>Кожные заболевания в стадии обострения</li>
+                                <li>Свежий загар</li>
+                                <li>Прием фотосенсибилизирующих препаратов</li>
+                                <li><b>Консультация перед процедурой обязательна</b></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11 & 12. Contacts & CTA -->
+        <section id="contacts" class="section contacts footer-cta">
+            <div class="container">
+                <div class="cta-wrapper js-fade-up">
+                    <h2 class="cta-huge js-split-text">Ждем<br>вас <i>в гости</i></h2>
+                    <p class="cta-desc">Запишитесь сейчас и зафиксируйте скидку 20% в честь открытия студии в Сочи.</p>
+                    <button class="btn btn--solid btn--massive magnetic js-open-modal" data-strength="50">Записаться сейчас</button>
+                    <p class="cta-micro"><i class="ri-time-line"></i> Отвечаем в течение 5–10 минут</p>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="fb-item">
+                        <span>Локация</span>
+                        <p>г. Сочи, ул. Конституции СССР 44/7</p>
+                    </div>
+                    <div class="fb-item">
+                        <span>Связь</span>
+                        <a href="tel:+79883536080" class="hover-line">8 988 353 60 80</a>
+                    </div>
+                    <div class="fb-item">
+                        <span>Режим работы</span>
+                        <p>10:00 — 20:00, ежедневно</p>
+                    </div>
+                    <div class="fb-item">
+                        <span>Оплата</span>
+                        <div class="pays"><i class="ri-bank-card-line"></i> <i class="ri-cash-line"></i> <i class="ri-qr-code-line"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal overlay js-modal">
+        <div class="modal__bg js-close-modal"></div>
+        <div class="modal__content">
+            <button class="modal__close js-close-modal magnetic"><i class="ri-close-line"></i></button>
+            <div class="modal__header">
+                <h3>Визит в Lumera</h3>
+                <p>Оставьте данные, и мы подберем идеальное время.</p>
+            </div>
+            <form class="form js-form">
+                <div class="input-group">
+                    <input type="text" required placeholder=" ">
+                    <label>Ваше имя</label>
+                </div>
+                <div class="input-group">
+                    <input type="tel" required placeholder=" ">
+                    <label>Номер телефона</label>
+                </div>
+                <button type="submit" class="btn btn--solid btn--full mt-4 magnetic">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
