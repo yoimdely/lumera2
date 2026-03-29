@@ -204,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 10. Modal Interactivity
     const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbzhDZygLClx4IkvdlJhdQJU9X2fQbC-hcDKVORmM_wtnxivERu9N_Th6MN9j08dbcru/exec';
+    const siteId = 'lumera-laser';
     const modal = document.querySelector('.js-modal');
     const timedPopup = document.querySelector('.js-timed-popup');
     const openBtns = document.querySelectorAll('.js-open-modal');
@@ -229,14 +230,46 @@ document.addEventListener('DOMContentLoaded', () => {
         lenis.start();
     };
 
+    const buildLeadMessage = (form) => {
+        const formName = form.querySelector('[name="form_name"]')?.value || form.dataset.formName || 'Заявка с сайта';
+        const source = form.querySelector('[name="source"]')?.value || 'lead';
+        const ctaLabel = form.querySelector('[name="cta_label"]')?.value || '-';
+        const pageTitle = form.querySelector('[name="page_title"]')?.value || document.title;
+        const submittedAt = form.querySelector('[name="submitted_at"]')?.value || new Date().toISOString();
+
+        return [
+            `Форма: ${formName}`,
+            `CTA: ${ctaLabel}`,
+            `Заголовок страницы: ${pageTitle}`,
+            `Отправлено: ${submittedAt}`,
+            `Source detail: ${source}`
+        ].join('\n');
+    };
+
     const fillFormMeta = (form, triggerLabel = '') => {
-        const pageUrlInput = form.querySelector('[name="page_url"]');
+        const siteIdInput = form.querySelector('[name="siteId"]');
+        const siteUrlInput = form.querySelector('[name="siteUrl"]');
+        const siteHostInput = form.querySelector('[name="siteHost"]');
+        const pageUrlInput = form.querySelector('[name="pageUrl"]');
         const pageTitleInput = form.querySelector('[name="page_title"]');
         const submittedAtInput = form.querySelector('[name="submitted_at"]');
         const ctaLabelInput = form.querySelector('[name="cta_label"]');
         const formNameInput = form.querySelector('[name="form_name"]');
+        const messageInput = form.querySelector('[name="message"]');
 
         form.action = appsScriptUrl;
+
+        if (siteIdInput) {
+            siteIdInput.value = siteId;
+        }
+
+        if (siteUrlInput) {
+            siteUrlInput.value = window.location.origin;
+        }
+
+        if (siteHostInput) {
+            siteHostInput.value = window.location.host;
+        }
 
         if (pageUrlInput) {
             pageUrlInput.value = window.location.href;
@@ -256,6 +289,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (formNameInput && !formNameInput.value) {
             formNameInput.value = form.dataset.formName || 'Заявка с сайта';
+        }
+
+        if (messageInput) {
+            messageInput.value = buildLeadMessage(form);
         }
     };
 
