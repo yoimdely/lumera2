@@ -14,6 +14,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="theme-light">
+    <!-- Preloader -->
+    <div class="preloader js-preloader">
+        <div class="preloader__logo js-preloader-text">Lumera.</div>
+        <div class="preloader__progress-wrap">
+            <div class="preloader__progress js-preloader-progress"></div>
+        </div>
+    </div>
+
     <!-- Custom Cursor -->
     <div class="cursor js-cursor"></div>
     <div class="cursor-follower js-cursor-follower"></div>
@@ -43,7 +51,7 @@
             <div class="hero__text-side">
                 <div class="hero__text-inner">
                     <div class="hero__badge js-fade-up">Premium Studio Sochi</div>
-                    <h1 class="hero__title js-split-text">Интеллектуальная<br>лазерная<br><i>эпиляция</i></h1>
+                    <h1 class="hero__title js-split-text">Интеллектуальная лазерная<br><i>эпиляция</i></h1>
                     <p class="hero__desc js-fade-up">Гладкая кожа без бритья уже через 2 недели. Индивидуальная настройка параметров для вашего идеального комфорта.</p>
                     
                     <div class="hero__buttons js-fade-up">
@@ -56,7 +64,7 @@
             
             <div class="hero__image-side">
                 <div class="hero__image-wrapper js-parallax" data-speed="0.9">
-                    <img src="images/hero.png" alt="Девушка Lumera">
+                    <img src="images/IMG_3399.PNG" alt="Девушка Lumera">
                 </div>
                 <div class="hero__promo">
                     <i class="ri-sparkling-fill"></i>
@@ -116,7 +124,7 @@
                         </ul>
                     </div>
                     <div class="split__visual js-img-reveal">
-                        <img src="images/machine.png" alt="Оборудование" data-speed="1.1" class="js-parallax">
+                        <img src="images/IMG_3695.PNG" alt="Оборудование" data-speed="1.1" class="js-parallax">
                         <div class="overlay-badge js-fade-up">
                             <i class="ri-drop-line"></i> Двойное охлаждение ICE
                         </div>
@@ -134,7 +142,25 @@
                         </ul>
                     </div>
                     <div class="split__visual js-img-reveal">
-                        <img src="images/interior.png" alt="Интерьер" data-speed="1.1" class="js-parallax">
+                        <img src="images/IMG_3397.PNG" alt="Интерьер" data-speed="1.1" class="js-parallax">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aesthetic Gallery -->
+        <section class="section gallery">
+            <div class="container container--large">
+                <div class="section__header text-center">
+                    <span class="section__label js-fade-up">Атмосфера</span>
+                    <h2 class="section__title js-split-text">Премиальное<br><i>пространство</i></h2>
+                </div>
+                <div class="gallery__grid">
+                    <div class="gallery__item gallery__item--1 js-img-reveal">
+                        <img src="images/IMG_3693.PNG" alt="Атмосфера студии" data-speed="1.1" class="js-parallax">
+                    </div>
+                    <div class="gallery__item gallery__item--2 js-img-reveal">
+                        <img src="images/IMG_3700.PNG" alt="Детали интерьера" data-speed="1.1" class="js-parallax">
                     </div>
                 </div>
             </div>
@@ -301,16 +327,64 @@
                 <h3>Визит в Lumera</h3>
                 <p>Оставьте данные, и мы подберем идеальное время.</p>
             </div>
-            <form class="form js-form">
+            <form
+                class="form js-form"
+                action="https://script.google.com/macros/s/AKfycbzhDZygLClx4IkvdlJhdQJU9X2fQbC-hcDKVORmM_wtnxivERu9N_Th6MN9j08dbcru/exec"
+                method="post"
+                data-form-name="Основная запись"
+            >
                 <div class="input-group">
-                    <input type="text" required placeholder=" ">
+                    <input type="text" name="name" autocomplete="name" required placeholder=" ">
                     <label>Ваше имя</label>
                 </div>
                 <div class="input-group">
-                    <input type="tel" required placeholder=" ">
+                    <input type="tel" name="phone" inputmode="tel" autocomplete="tel" required placeholder=" ">
                     <label>Номер телефона</label>
                 </div>
-                <button type="submit" class="btn btn--solid btn--full mt-4 magnetic">Отправить</button>
+                <input type="hidden" name="form_name" value="Основная запись">
+                <input type="hidden" name="source" value="main_modal">
+                <input type="hidden" name="cta_label" value="">
+                <input type="hidden" name="page_url" value="">
+                <input type="hidden" name="page_title" value="">
+                <input type="hidden" name="submitted_at" value="">
+                <p class="form__status js-form-status" aria-live="polite"></p>
+                <button type="submit" class="btn btn--solid btn--full mt-4 magnetic js-form-submit">
+                    <span>Отправить</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Timed Offer Popup -->
+    <div class="modal overlay js-timed-popup">
+        <div class="modal__bg js-close-popup"></div>
+        <div class="modal__content modal__content--accent">
+            <button class="modal__close js-close-popup magnetic"><i class="ri-close-line"></i></button>
+            <div class="modal__header">
+                <span class="modal__badge">Специальное предложение</span>
+                <h3>Секрет<br><i>гладкости</i></h3>
+                <p>Запишитесь прямо сейчас и получите <b>скидку 20%</b> на первый визит + бесплатную консультацию и анализ кожи.</p>
+            </div>
+            <form
+                class="form js-form"
+                action="https://script.google.com/macros/s/AKfycbzhDZygLClx4IkvdlJhdQJU9X2fQbC-hcDKVORmM_wtnxivERu9N_Th6MN9j08dbcru/exec"
+                method="post"
+                data-form-name="Таймерная скидка"
+            >
+                <div class="input-group">
+                    <input type="tel" name="phone" inputmode="tel" autocomplete="tel" required placeholder=" ">
+                    <label>Ваш телефон</label>
+                </div>
+                <input type="hidden" name="form_name" value="Таймерная скидка">
+                <input type="hidden" name="source" value="timed_popup">
+                <input type="hidden" name="cta_label" value="Таймерное предложение">
+                <input type="hidden" name="page_url" value="">
+                <input type="hidden" name="page_title" value="">
+                <input type="hidden" name="submitted_at" value="">
+                <p class="form__status js-form-status" aria-live="polite"></p>
+                <button type="submit" class="btn btn--solid btn--accent btn--full mt-4 magnetic js-form-submit">
+                    <span>Забронировать скидку</span>
+                </button>
             </form>
         </div>
     </div>
