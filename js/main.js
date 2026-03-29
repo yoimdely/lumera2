@@ -165,21 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     });
 
-    // 7. Parallax Images
-    const parallaxImages = document.querySelectorAll('.js-parallax');
-    parallaxImages.forEach(img => {
-        const speed = img.dataset.speed || 0.5;
-        gsap.to(img, {
-            yPercent: 20 * speed,
-            ease: "none",
-            scrollTrigger: {
-                trigger: img.parentElement,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true
-            }
-        });
-    });
+    // 7. Parallax Images - Disabled as per user request (images should not slide)
 
     // 8. Header Hide/Show on Scroll
     let lastScroll = 0;
